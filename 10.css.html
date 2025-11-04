@@ -1,0 +1,16 @@
+<html>
+  <head><title>css</title><!-- 頁面標題 -->
+    <!--internal(內部引用)-->
+    <style>
+    h2 {color:green;}/* 將所有 <h2> 設為綠色 */
+    </style>
+    <!--external外部引用-->
+    <link rel="stylesheet" href="import.css">
+    </head>
+    <body>
+      <!--inline(行內引用)-->
+      <h1 style="color:red">這是紅色的標題</h1>
+      <h2>這是綠色的標題</h2> <!-- 這裡的 <h2> 套用上面 internal CSS 設定的綠色 -->
+      <h3>這是藍色的標題</h3> <!-- 這裡的 <h3> 顏色若在外部 import.css 檔案中設定藍色，就會顯示藍色 -->
+  </body>
+</html>
