@@ -1,0 +1,282 @@
+<html>
+    <head><title>明新泡麵店舖</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                rtl: true
+            });
+        });
+    </script>
+    <style>
+        
+        *{
+            margin:0px;
+            color:rgb(180, 6, 20);
+            text-align:center;
+        }
+        /* top */
+        .top{
+             background-color: white;
+        }
+        .top .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:10px;
+        }
+        .top .logo{
+            /*border:1px solid red;*/
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .top .logo img{
+            width: 100px;
+            vertical-align: middle;
+        }
+        .top .top-nav{
+            /*border:1px solid red;*/
+            font-size: 25px;
+            font-weight: bold;       
+        }
+        .top .top-nav a{
+            text-decoration: none;
+        }
+        /* nav */
+        .nav {
+            background-color:#ec5b5b;
+            display: flex;
+            justify-content: center;
+        }
+        .nav ul {
+            list-style-type: none;  
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background-color: #883333; 
+        }
+        .nav li {
+            float: left; 
+        }
+        .nav li a {    
+            display: block;  
+            color: white;  
+            text-align: center;  
+            padding: 14px 16px;  
+            text-decoration: none;  
+        }
+        .nav li a:hover {
+            background-color: #111; 
+        }
+        /*下拉式選單*/
+        .dropdown:hover .dropdown-content {
+            display: block;   /*使用block呈現上下排列*/
+        }
+        li.dropdown:hover{
+            background-color: #af1b1b;  /*設定背景顏色*/
+        }
+        .dropdown-content {  /*設定下拉選單內容格式*/
+            display: none;
+            position: absolute;
+            background-color: #da3a3a;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {/*設定下拉選單連結內容格式*/
+            color: rgb(82, 149, 226);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* slider */
+        .slider{
+            background-color: black;
+        }
+
+        /* banner*/
+        .banner{
+            background-image: linear-gradient(#40a37d,#6baad8);
+            padding:30px;
+        }
+        .banner h1{
+            padding: 20px;
+        }        
+        /*faculty*/
+        .faculty {
+            display: block;
+            justify-content: center;
+            background-color:white;
+            padding:40px;
+        }
+        .faculty h2 {
+            font-size: 25px;
+            color: rgb(235, 108, 192);
+            padding-bottom:40px;
+        }
+        .faculty .container {
+            /*border:1px solid red;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .faculty .teacher{
+            /*border:1px solid blue;*/
+            display:block;
+            text-decoration: none;
+        }
+        .faculty .teacher img{
+            height: 250px;
+            width: 250px;
+        }
+        .faculty .teacher h3{
+            color: White;
+            background-color: rgba(123, 24, 236, 0.5);
+            text-align: center;           
+        }
+        /*contact*/
+        .contact {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;                
+        }
+        .contact .container{
+            display: block;
+        }
+        .contact .container h2{
+            color: rgb(54, 82, 110);
+            font-size: 25px;
+        }
+        .contact .container .infos{
+            display:flex;
+            margin-top: 30px; 
+        }
+        .contact .container .infos .left{
+            display:block;
+            text-align: left;
+            margin-right: 30px;
+        }
+        .contact .container .infos .left b{
+            display:block;
+            text-align: left;
+            margin-top: 10px;
+            text-decoration: bold;
+            color: Gray;
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .contact .container .infos .left span{
+            display:block;
+            text-align: left;
+            margin-top: 10px;
+            color: rgba(39,40,34,0.5);
+            font-size: 16px;
+            padding-left: 27px;
+        }
+        .contact .container .infos .right{
+            height: 200px;               
+        }
+        .contact .container .infos .right iframe{
+            width: 100%;
+            height: 100%;
+        }
+        /*footer*/
+        .footer{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(25,26,30);
+            padding: 30px 0;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="logo">
+                  <img src="https://raw.githubusercontent.com/zako17030-dot/html/refs/heads/main/ramenicon111.png">
+                  明新泡麵店舖
+                </div>
+                <div class="top-nav">
+                  <a href=>主頁</a>
+                  <a href=>註冊</a>
+                  <a href=>登入</a>
+                </div>
+              </div>
+        </div>
+        <div class="nav">   
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#introduction">泡麵簡介</a></li>
+                <li  class="dropdown"><a href="#faculty">主推泡麵</a>
+                    <div class="dropdown-content">
+                        <a href="#faculty">維力炸醬麵</a>
+                        <a href="#faculty">辛拉麵</a>
+                        <a href="#faculty">三養火雞麵</a>
+                    </div>                       
+                </li>
+                <li><a href="#about">相關資訊</a></li>
+            </ul>
+        </div>
+        <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="https://raw.githubusercontent.com/zako17030-dot/html/refs/heads/main/slider1.jpg" /></li>
+                    <li><img src="https://raw.githubusercontent.com/zako17030-dot/html/refs/heads/main/slider2.jpg" /></li>
+                    <li><img src="https://raw.githubusercontent.com/zako17030-dot/html/refs/heads/main/slider3.jpg" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner" id="introduction">
+            <h1>泡麵類別簡介</h1>
+            <h1>油炸麵：最常見，麵體經過油炸乾燥，口感Q彈，保存期長。
+<br>非油炸麵：麵體經過熱風乾燥或蒸煮，脂肪含量較低，口感接近生麵。</h1>
+            <h1>杯麵：直接在杯子裡沖泡，方便攜帶和食用，份量通常較小。
+<br>袋麵：需使用碗或鍋子煮/泡，份量較大，常有更多調味包或配料。</h1>
+            <h1>乾拌麵：無湯。將麵煮熟後瀝乾，加入醬汁或油包拌勻食用。
+<br>湯麵：麵體搭配湯包沖泡或煮，有湯汁可飲用。
+<br>風味麵：如：紅燒牛肉、海鮮、豚骨、麻辣、雞汁等，是變化最多的分類依據。</h1>
+        </div>
+        <div class="faculty" id="faculty">
+            <h2>主推泡麵!</h2>
+            <div class="container">
+                <a class="teacher" href="">
+                    <img src="https://raw.githubusercontent.com/zako17030-dot/html/refs/heads/main/weili1.jpg" />
+                    <h3>維力炸醬麵</h3>
+                </a>
+                <a class="teacher" href="">
+                    <img src="https://raw.githubusercontent.com/zako17030-dot/html/refs/heads/main/xinla2.jpg" />
+                    <h3>辛拉麵</h3>
+                </a>
+                <a class="teacher" href="">
+                    <img src="https://raw.githubusercontent.com/zako17030-dot/html/refs/heads/main/houji3.jpg" />
+                    <h3>三養火雞麵</h3>
+                </a>        
+            </div>
+        </div>
+        <div class="contact" id="about">
+            <div class="container">
+                <h2>相關資訊和店舖位置</h2>
+                <div class="infos">
+                    <div class="left">
+                        <b>明新科技大學泡麵大樓</b>
+                        <span>304新竹縣新豐鄉新興路1號</span>
+                        <b> 電話:03-4455667</b>
+                        <span>分機:2222、3333、4444</span>
+                    </div>
+                    <div class="right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.185885150929!2d120.98912333466727!3d24.86332844316392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683154faa8283b%3A0x92cb1c5564a574ef!2z5piO5paw56eR5oqA5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1536665837954" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            &copy;Copyright 2025 Department of Information Management, RAMEN. All rights reserved. 維護者 Huang Guan Bo
+        </div>
+     </body>
+</html>
